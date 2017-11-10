@@ -538,7 +538,7 @@ abstract class Model {
 	 * @return bool
 	 */
 	function delete() {
-		if ($this->db()->rem($this->key())) {
+		if ($this->db()->del($this->key())) {
 			$this->isNew = true;
 			return true;
 		}
